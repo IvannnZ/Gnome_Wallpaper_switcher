@@ -1,0 +1,1 @@
+way_to_wallpapers = "/home/ivannz/Pictures/Wallpapers"
