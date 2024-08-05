@@ -5,9 +5,9 @@ import subprocess
 import config
 import random
 
-name_wallpaper = subprocess.getoutput(f"ls {config.way_to_wallpapers}").split()
+name_wallpaper = subprocess.getoutput(f"ls {config.way_to_wallpapers}").split("\n")
 select_wallpaper = random.randrange(0, len(name_wallpaper))
 
 os.system(
     f"gsettings set org.gnome.desktop.background picture-uri-dark file://{config.way_to_wallpapers}/{name_wallpaper[select_wallpaper]}")
-
+print(f"Walpaper {config.way_to_wallpapers}/{name_wallpaper[select_wallpaper]} is set\nWalpapers in dirictory is:{len(name_wallpaper)}\nWalpaper in dir:")
